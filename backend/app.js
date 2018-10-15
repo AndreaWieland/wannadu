@@ -11,7 +11,7 @@ const userRoutes = require("./routes/user");
 const app = express();
 
 //establish a connection with the mongo cloud atlas cluster. wannadu is my db name
-mongoose.connect('mongodb+srv://andrea:mark1987@cluster0-lonu7.mongodb.net/wannadu').then(() => {
+mongoose.connect(redacted you filthy animals).then(() => {
 	console.log('Connected bayBEE!');
 }).catch(() => {
 	console.log('Connection failed');
