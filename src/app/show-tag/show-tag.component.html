@@ -1,0 +1,8 @@
+  <mat-chip-list #chipList>
+  	<div *ngFor="let chip of chips">
+	    <mat-chip [ngClass]="{'selected': chip.sel}" (click)="selectChip(chip)">
+	      {{chip.name}}
+	    </mat-chip>
+	</div>
+  </mat-chip-list>
+

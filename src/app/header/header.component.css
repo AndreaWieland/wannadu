@@ -1,0 +1,15 @@
+.fillSpace {
+  flex: 1 1 auto;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.mat-raised-button{
+	margin-right: 10px;
+}
+
+

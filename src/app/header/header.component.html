@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <a routerLink="" color="accent"><button mat-fab>WD</button></a>
+  <a routerLink="/do" *ngIf="userIsAuthenticated">Do</a>
+  <a routerLink="/plan" *ngIf="userIsAuthenticated">Plan</a>
+  <a routerLink="/discover" *ngIf="userIsAuthenticated">Discover</a>
+
+  <span class="fillSpace"></span>
+  <div *ngIf="!userIsAuthenticated">
+	  <a routerLink="/login"><button mat-raised-button color="accent">Log In</button></a>
+    <a routerLink="/signup"><button mat-raised-button color="accent">Sign Up</button></a>
+  </div>
+  <button mat-raised-button *ngIf="userIsAuthenticated" (click)="onLogout()">Log Out</button>
+
+</mat-toolbar>

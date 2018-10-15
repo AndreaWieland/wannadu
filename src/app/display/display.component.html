@@ -1,0 +1,32 @@
+
+<div *ngFor="let idea of displayideas; let i = index">
+<mat-card *ngIf="!endOfList && i == activeIndex">
+	<mat-card-actions>
+	   	<button mat-button color="primary" class="exciting-button" (click)="getRandomIdea()">Show me another!</button>
+  	</mat-card-actions>
+  	<div class="focus">
+  	<mat-card-title>{{ idea.description }}</mat-card-title>
+	<mat-card-content>
+		<h4>{{ idea.location }}</h4>
+		<h4><a href="{{idea.website}}">{{ idea.website }}</a></h4>
+	</mat-card-content>
+	</div>
+	<mat-card-actions align="end">
+		<button mat-button color="accent" (click)="onDelete(idea.id)">DELETE</button>
+		<a mat-button color="accent" [routerLink]="['/edit', idea.id]">EDIT</a>
+
+<!--This is where social share will go -->
+<!--<div class="fb-share-button" data-href="http://www.wannadu.com/user/idea/12345" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.wannadu.com%2Fuser%2Fidea%2F12345&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div> -->
+	</mat-card-actions>
+</mat-card></div>
+
+<mat-card *ngIf="endOfList">
+	<mat-card-title>Uh-oh! It looks like you've hit the end of the list!</mat-card-title>
+	<button mat-button (click)=resetList()>Start Over</button>
+	<button mat-button><a routerLink="/plan">Add More Ideas</a></button>
+	<button mat-button><a routerLink="/discover">Search Community Ideas</a></button>
+</mat-card> 
+<mat-card>
+	<mat-card-content>Narrow results by tag</mat-card-content>
+	<app-show-tag></app-show-tag>
+</mat-card>

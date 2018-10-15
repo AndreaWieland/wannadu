@@ -1,0 +1,26 @@
+TO-DOS
+------------------
+-figure out how to store to individual account
+-add a dialog to confirm idea delete
+-fix up styling: community buttons, background video, google fonts, transition animations if possible, change the colors, set a max width on cards, probably ditch the accordian
+-deploy to wannadu.net
+-social share: if it would be easy to share a single idea page via widget, do that. if not, mainpage
+-tag code needs to be moved to service so that tags can be accessed from community page
+-create a signup success modal and redirect to add page
+-messaging for first visit
+	
+
+
+
+DONE! adding a tag to an idea:
+DONE! add to array in idea object
+DONE! search tags model for tag string. if exists, increment count. if not exists, push tag name and increment count
+DONE! -add button and method to pull community ideas to user account
+DONE! -show community ideas in a list
+DONE!! -add editing an existing idea
+DONE!!-implement pagination
+DONE!!-pulling tags, sorting by count, displaying, toggling
+DONE!!-update idea model to include tags
+DONE!!-in display.component.ts, figure out how to filter down displayed ideas by comparing the tags they contain with the array of tag strings you get from the selected tag subscription. the visible ideas need to be updated every time the service is updated. two possible solutions: solution: wrote a function to ensure all selected tags are in idea tags, then used it to filter down to display ideas
+DONE!-add authentication
+DONE!!-create ideas for community db
